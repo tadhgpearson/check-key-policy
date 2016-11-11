@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="4" name="check-key">
+    <Basepaths>/check-key</Basepaths>
+    <ConfigurationVersion majorVersion="1" minorVersion="0"/>
+    <CreatedAt>1478898995312</CreatedAt>
+    <CreatedBy>tadhg.pearson@gmail.com</CreatedBy>
+    <Description>Checks the validity of a given API key</Description>
+    <DisplayName>check-key</DisplayName>
+    <LastModifiedAt>1478898995312</LastModifiedAt>
+    <LastModifiedBy>tadhg.pearson@gmail.com</LastModifiedBy>
+    <Policies>
+        <Policy>Extract-Developer-First-Name</Policy>
+        <Policy>Extract-Display-Name</Policy>
+        <Policy>Get-Developer-App</Policy>
+        <Policy>Get-Developer-Profile</Policy>
+        <Policy>apikey-valid</Policy>
+        <Policy>invalid-apikey</Policy>
+        <Policy>verify-api-key</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints/>
+</APIProxy>

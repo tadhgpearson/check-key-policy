@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Developer-First-Name">
+    <DisplayName>Extract Developer First Name</DisplayName>
+    <Source>AccessEntity.Get-Developer-Profile</Source>
+    <VariablePrefix>developer</VariablePrefix>
+    <XMLPayload>
+        <Variable name="first-name" type="string">
+            <!-- You parse elements from the developer profile using XPath. -->
+            <XPath>/Developer/FirstName</XPath>
+        </Variable>
+    </XMLPayload>
+</ExtractVariables>

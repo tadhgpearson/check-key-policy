@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Display-Name">
+    <DisplayName>Extract Display Name</DisplayName>
+    <Source>AccessEntity.Get-Developer-App</Source>
+    <VariablePrefix>app</VariablePrefix>
+    <XMLPayload>
+        <Variable name="displayname" type="string">
+            <!-- You parse elements from the developer profile using XPath. -->
+            <XPath>/App/Attributes/Attribute[Name="DisplayName"]/Value</XPath>
+        </Variable>
+    </XMLPayload>
+</ExtractVariables>

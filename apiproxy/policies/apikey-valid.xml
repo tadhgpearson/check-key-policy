@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="apikey-valid">
+    <DisplayName>APIKey Valid</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <Headers>
+                <Header name="Access-Control-Allow-Origin">*</Header>
+                <Header name="Access-Control-Allow-Headers">origin, x-requested-with, accept</Header>
+                <Header name="Access-Control-Max-Age">3628800</Header>
+                <Header name="Access-Control-Allow-Methods">GET, PUT, POST, DELETE</Header>
+            </Headers>
+            <Payload contentType="application/json">\{ 
+  "key-status" : "{verifyapikey.verify-api-key.app.status}",
+  "app-name" : "{app.displayname}",
+  "developer-name" : "{developer.first-name}",
+  "developer-email" : "{developer.email}"
+}
+          </Payload>
+            <StatusCode>200</StatusCode>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

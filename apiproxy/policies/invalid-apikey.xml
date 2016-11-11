@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="invalid-apikey">
+    <DisplayName>Invalid API Key</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <Headers>
+                <Header name="WWW-Authenticate">apikey realm="api.sandbox.amadeus.com"</Header>
+                <Header name="Access-Control-Allow-Origin">*</Header>
+                <Header name="Access-Control-Allow-Headers">origin, x-requested-with, accept</Header>
+                <Header name="Access-Control-Max-Age">3628800</Header>
+                <Header name="Access-Control-Allow-Methods">GET, PUT, POST, DELETE</Header>
+            </Headers>
+            <Payload contentType="application/json">\{ 
+  "status" : 401,            
+  "message" : "Invalid or missing API key",
+  "more_info" : "A valid API key is required to access this resource. Please ensure your request includes a query parameter called apikey, whose value is a valid API key from your account"
+}
+            </Payload>
+            <StatusCode>401</StatusCode>
+            <ReasonPhrase>Invalid or Missing API key</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>
